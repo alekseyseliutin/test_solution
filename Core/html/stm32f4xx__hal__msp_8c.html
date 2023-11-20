@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TEST_SOLUTION: Файл Src/stm32f4xx_hal_msp.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TEST_SOLUTION
+   </div>
+   <div id="projectbrief">Запуск ADC от таймера частотой 5кГц, запуск DMA, 1 раз в секунду усреднение и результатов в терминал</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл stm32f4xx_hal_msp.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file provides code for the MSP Initialization and de-Initialization codes.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;main.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ae4fb8e66865c87d0ebab74a726a6891f" id="r_ae4fb8e66865c87d0ebab74a726a6891f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f">HAL_MspInit</a> (void)</td></tr>
+<tr class="separator:ae4fb8e66865c87d0ebab74a726a6891f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd409f887681168e93817e8a5485d74b" id="r_acd409f887681168e93817e8a5485d74b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__msp_8c.html#acd409f887681168e93817e8a5485d74b">HAL_DAC_MspInit</a> (DAC_HandleTypeDef *hdac)</td></tr>
+<tr class="memdesc:acd409f887681168e93817e8a5485d74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">DAC MSP Initialization This function configures the hardware resources used in this example.  <br /></td></tr>
+<tr class="separator:acd409f887681168e93817e8a5485d74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4caf761f179e82f99674ef63643340f3" id="r_a4caf761f179e82f99674ef63643340f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__msp_8c.html#a4caf761f179e82f99674ef63643340f3">HAL_DAC_MspDeInit</a> (DAC_HandleTypeDef *hdac)</td></tr>
+<tr class="memdesc:a4caf761f179e82f99674ef63643340f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">DAC MSP De-Initialization This function freeze the hardware resources used in this example.  <br /></td></tr>
+<tr class="separator:a4caf761f179e82f99674ef63643340f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee6eddaa309c8c9829f1ca794d8f99c5" id="r_aee6eddaa309c8c9829f1ca794d8f99c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__msp_8c.html#aee6eddaa309c8c9829f1ca794d8f99c5">HAL_RTC_MspInit</a> (RTC_HandleTypeDef *hrtc)</td></tr>
+<tr class="memdesc:aee6eddaa309c8c9829f1ca794d8f99c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC MSP Initialization This function configures the hardware resources used in this example.  <br /></td></tr>
+<tr class="separator:aee6eddaa309c8c9829f1ca794d8f99c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8767bc3a4d472d39a688090ab10ba6ce" id="r_a8767bc3a4d472d39a688090ab10ba6ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__msp_8c.html#a8767bc3a4d472d39a688090ab10ba6ce">HAL_RTC_MspDeInit</a> (RTC_HandleTypeDef *hrtc)</td></tr>
+<tr class="memdesc:a8767bc3a4d472d39a688090ab10ba6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC MSP De-Initialization This function freeze the hardware resources used in this example.  <br /></td></tr>
+<tr class="separator:a8767bc3a4d472d39a688090ab10ba6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb25ade2f7e3f7aae167bd52270c2b86" id="r_abb25ade2f7e3f7aae167bd52270c2b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__msp_8c.html#abb25ade2f7e3f7aae167bd52270c2b86">HAL_TIM_Base_MspInit</a> (TIM_HandleTypeDef *htim_base)</td></tr>
+<tr class="memdesc:abb25ade2f7e3f7aae167bd52270c2b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM_Base MSP Initialization This function configures the hardware resources used in this example.  <br /></td></tr>
+<tr class="separator:abb25ade2f7e3f7aae167bd52270c2b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a555b8a2d3c7a07341f8cb1255318fa2b" id="r_a555b8a2d3c7a07341f8cb1255318fa2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__msp_8c.html#a555b8a2d3c7a07341f8cb1255318fa2b">HAL_TIM_Base_MspDeInit</a> (TIM_HandleTypeDef *htim_base)</td></tr>
+<tr class="memdesc:a555b8a2d3c7a07341f8cb1255318fa2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM_Base MSP De-Initialization This function freeze the hardware resources used in this example.  <br /></td></tr>
+<tr class="separator:a555b8a2d3c7a07341f8cb1255318fa2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>This file provides code for the MSP Initialization and de-Initialization codes. </p>
+<dl class="section attention"><dt>Внимание</dt><dd></dd></dl>
+<h2><center>&copy; Copyright (c) 2023 STMicroelectronics. All rights reserved.</center></h2>
+<p>This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a4caf761f179e82f99674ef63643340f3" name="a4caf761f179e82f99674ef63643340f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4caf761f179e82f99674ef63643340f3">&#9670;&#160;</a></span>HAL_DAC_MspDeInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_DAC_MspDeInit </td>
+          <td>(</td>
+          <td class="paramtype">DAC_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hdac</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DAC MSP De-Initialization This function freeze the hardware resources used in this example. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hdac</td><td>DAC handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>DAC GPIO Configuration PA4 ---&mdash;&gt; DAC_OUT1</p>
+
+</div>
+</div>
+<a id="acd409f887681168e93817e8a5485d74b" name="acd409f887681168e93817e8a5485d74b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd409f887681168e93817e8a5485d74b">&#9670;&#160;</a></span>HAL_DAC_MspInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_DAC_MspInit </td>
+          <td>(</td>
+          <td class="paramtype">DAC_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hdac</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DAC MSP Initialization This function configures the hardware resources used in this example. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hdac</td><td>DAC handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>DAC GPIO Configuration PA4 ---&mdash;&gt; DAC_OUT1</p>
+
+</div>
+</div>
+<a id="ae4fb8e66865c87d0ebab74a726a6891f" name="ae4fb8e66865c87d0ebab74a726a6891f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4fb8e66865c87d0ebab74a726a6891f">&#9670;&#160;</a></span>HAL_MspInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_MspInit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the Global MSP. </p>
+
+</div>
+</div>
+<a id="a8767bc3a4d472d39a688090ab10ba6ce" name="a8767bc3a4d472d39a688090ab10ba6ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8767bc3a4d472d39a688090ab10ba6ce">&#9670;&#160;</a></span>HAL_RTC_MspDeInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_RTC_MspDeInit </td>
+          <td>(</td>
+          <td class="paramtype">RTC_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hrtc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTC MSP De-Initialization This function freeze the hardware resources used in this example. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hrtc</td><td>RTC handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aee6eddaa309c8c9829f1ca794d8f99c5" name="aee6eddaa309c8c9829f1ca794d8f99c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee6eddaa309c8c9829f1ca794d8f99c5">&#9670;&#160;</a></span>HAL_RTC_MspInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_RTC_MspInit </td>
+          <td>(</td>
+          <td class="paramtype">RTC_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>hrtc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RTC MSP Initialization This function configures the hardware resources used in this example. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hrtc</td><td>RTC handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a555b8a2d3c7a07341f8cb1255318fa2b" name="a555b8a2d3c7a07341f8cb1255318fa2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a555b8a2d3c7a07341f8cb1255318fa2b">&#9670;&#160;</a></span>HAL_TIM_Base_MspDeInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_TIM_Base_MspDeInit </td>
+          <td>(</td>
+          <td class="paramtype">TIM_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>htim_base</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM_Base MSP De-Initialization This function freeze the hardware resources used in this example. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">htim_base</td><td>TIM_Base handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abb25ade2f7e3f7aae167bd52270c2b86" name="abb25ade2f7e3f7aae167bd52270c2b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb25ade2f7e3f7aae167bd52270c2b86">&#9670;&#160;</a></span>HAL_TIM_Base_MspInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_TIM_Base_MspInit </td>
+          <td>(</td>
+          <td class="paramtype">TIM_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>htim_base</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TIM_Base MSP Initialization This function configures the hardware resources used in this example. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">htim_base</td><td>TIM_Base handle pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

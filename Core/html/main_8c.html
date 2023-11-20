@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TEST_SOLUTION: Файл Src/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TEST_SOLUTION
+   </div>
+   <div id="projectbrief">Запуск ADC от таймера частотой 5кГц, запуск DMA, 1 раз в секунду усреднение и результатов в терминал</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл main.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>: Тестовое задание  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;main.h&quot;</code><br />
+<code>#include &quot;stdio.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a84ad8abb26bff116df93ff56794334b9" id="r_a84ad8abb26bff116df93ff56794334b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a84ad8abb26bff116df93ff56794334b9">ADC_BUF_SIZE</a>&#160;&#160;&#160;125</td></tr>
+<tr class="separator:a84ad8abb26bff116df93ff56794334b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a70af21c671abfcc773614a9a4f63d920" id="r_a70af21c671abfcc773614a9a4f63d920"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920">SystemClock_Config</a> (void)</td></tr>
+<tr class="memdesc:a70af21c671abfcc773614a9a4f63d920"><td class="mdescLeft">&#160;</td><td class="mdescRight">System Clock Configuration.  <br /></td></tr>
+<tr class="separator:a70af21c671abfcc773614a9a4f63d920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe" id="r_a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The application entry point.  <br /></td></tr>
+<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b617ba272dd37827ba86861517127ec" id="r_a7b617ba272dd37827ba86861517127ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7b617ba272dd37827ba86861517127ec">ADC_DMA_TransferComplete_Callback</a> ()</td></tr>
+<tr class="separator:a7b617ba272dd37827ba86861517127ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1730ffe1e560465665eb47d9264826f9" id="r_a1730ffe1e560465665eb47d9264826f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a> (void)</td></tr>
+<tr class="memdesc:a1730ffe1e560465665eb47d9264826f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is executed in case of error occurrence.  <br /></td></tr>
+<tr class="separator:a1730ffe1e560465665eb47d9264826f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a40a0d1383beda58531dfda6218720e45" id="r_a40a0d1383beda58531dfda6218720e45"><td class="memItemLeft" align="right" valign="top"><a id="a40a0d1383beda58531dfda6218720e45" name="a40a0d1383beda58531dfda6218720e45"></a>
+DAC_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><b>hdac</b></td></tr>
+<tr class="separator:a40a0d1383beda58531dfda6218720e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c7fca836406ade332e1e3f1039d8ab" id="r_aa0c7fca836406ade332e1e3f1039d8ab"><td class="memItemLeft" align="right" valign="top"><a id="aa0c7fca836406ade332e1e3f1039d8ab" name="aa0c7fca836406ade332e1e3f1039d8ab"></a>
+RTC_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><b>hrtc</b></td></tr>
+<tr class="separator:aa0c7fca836406ade332e1e3f1039d8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c80fd5510e2990a59a5c90d745c716c" id="r_a2c80fd5510e2990a59a5c90d745c716c"><td class="memItemLeft" align="right" valign="top"><a id="a2c80fd5510e2990a59a5c90d745c716c" name="a2c80fd5510e2990a59a5c90d745c716c"></a>
+TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><b>htim2</b></td></tr>
+<tr class="separator:a2c80fd5510e2990a59a5c90d745c716c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9fcb26f5b920b08b357e00e1ba3e6a4" id="r_ac9fcb26f5b920b08b357e00e1ba3e6a4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac9fcb26f5b920b08b357e00e1ba3e6a4">ADC_data</a> [<a class="el" href="main_8c.html#a84ad8abb26bff116df93ff56794334b9">ADC_BUF_SIZE</a>]</td></tr>
+<tr class="separator:ac9fcb26f5b920b08b357e00e1ba3e6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36692bbc61358ebc0e37a6fc6a395d28" id="r_a36692bbc61358ebc0e37a6fc6a395d28"><td class="memItemLeft" align="right" valign="top"><a id="a36692bbc61358ebc0e37a6fc6a395d28" name="a36692bbc61358ebc0e37a6fc6a395d28"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>result</b> = 0</td></tr>
+<tr class="separator:a36692bbc61358ebc0e37a6fc6a395d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bc5b9cab8f5380bcd1f15ff5145d49" id="r_ad3bc5b9cab8f5380bcd1f15ff5145d49"><td class="memItemLeft" align="right" valign="top"><a id="ad3bc5b9cab8f5380bcd1f15ff5145d49" name="ad3bc5b9cab8f5380bcd1f15ff5145d49"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>f_ready</b> = 0</td></tr>
+<tr class="separator:ad3bc5b9cab8f5380bcd1f15ff5145d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>: Тестовое задание </p>
+<dl class="section author"><dt>Авторы</dt><dd>: Селютин Алексей </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>: 19.11.2023 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Необходимо сделать:</a></b></dt><dd>Что можно добавить: - калибровку ADC и измерение Vref. Это может повысить точность измерений. <br  />
+ По причине отсутствия выхода SWO ST-LINK2 - вывод отладочной информации в терминал не тестировался. <br  />
+ Для включения вывода в терминал должно быть достаточно включить #define PRINTF_ENABLE</dd></dl>
+<h2><center>&copy; Copyright (c) 2023 STMicroelectronics. All rights reserved.</center></h2>
+<p>This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </p>
+</div><h2 class="groupheader">Макросы</h2>
+<a id="a84ad8abb26bff116df93ff56794334b9" name="a84ad8abb26bff116df93ff56794334b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84ad8abb26bff116df93ff56794334b9">&#9670;&#160;</a></span>ADC_BUF_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_BUF_SIZE&#160;&#160;&#160;125</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Размер буфера DMA </p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a7b617ba272dd37827ba86861517127ec" name="a7b617ba272dd37827ba86861517127ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b617ba272dd37827ba86861517127ec">&#9670;&#160;</a></span>ADC_DMA_TransferComplete_Callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADC_DMA_TransferComplete_Callback </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Обработка буфера данных от ADC. Вызывается из прерывания DMA раз 25мс. Усредняет 125 значений из ADC и выставляет в DAC </p>
+
+</div>
+</div>
+<a id="a1730ffe1e560465665eb47d9264826f9" name="a1730ffe1e560465665eb47d9264826f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1730ffe1e560465665eb47d9264826f9">&#9670;&#160;</a></span>Error_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Error_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is executed in case of error occurrence. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a840291bc02cba5474a4cb46a9b9566fe" name="a840291bc02cba5474a4cb46a9b9566fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The application entry point. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a70af21c671abfcc773614a9a4f63d920" name="a70af21c671abfcc773614a9a4f63d920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70af21c671abfcc773614a9a4f63d920">&#9670;&#160;</a></span>SystemClock_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemClock_Config </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>System Clock Configuration. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Configure the main internal regulator output voltage</p>
+<p>Initializes the RCC Oscillators according to the specified parameters in the RCC_OscInitTypeDef structure.</p>
+<p>Initializes the CPU, AHB and APB buses clocks</p>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="ac9fcb26f5b920b08b357e00e1ba3e6a4" name="ac9fcb26f5b920b08b357e00e1ba3e6a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9fcb26f5b920b08b357e00e1ba3e6a4">&#9670;&#160;</a></span>ADC_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ADC_data[<a class="el" href="main_8c.html#a84ad8abb26bff116df93ff56794334b9">ADC_BUF_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Буфер для данных из ADC </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

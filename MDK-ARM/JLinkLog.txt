@@ -1,0 +1,57 @@
+T66C4 003:709.909   SEGGER J-Link V7.82 Log File
+T66C4 003:710.002   DLL Compiled: Oct 13 2022 13:32:51
+T66C4 003:710.008   Logging started @ 2023-11-19 06:19
+T66C4 003:710.013 - 3710.016ms
+T66C4 003:710.022 JLINK_SetWarnOutHandler(...)
+T66C4 003:710.029 - 0.009ms
+T66C4 003:710.035 JLINK_OpenEx(...)
+T66C4 003:710.990   
+  ***** Error: 
+T66C4 003:711.002   Cannot connect to J-Link.
+T66C4 003:716.093 - 6.070ms returns "Cannot connect to J-Link."
+T66C4 003:716.420 
+  ***** 
+T66C4 003:716.432 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T66C4 003:716.441 JLINK_GetHardwareVersion()
+T66C4 003:716.999   
+  ***** Error: 
+T66C4 003:717.009   Cannot connect to J-Link.
+T66C4 003:721.535 - 5.102ms
+T66C4 016:699.175 
+  ***** 
+T66C4 016:699.205 API Error: API JLINK_GetFirmwareString function called before JLINKARM_Open()
+T66C4 016:699.218 JLINK_GetFirmwareString(...)
+T66C4 016:700.006   
+  ***** Error: 
+T66C4 016:700.018   Cannot connect to J-Link.
+T66C4 016:705.328 - 6.117ms
+T66C4 016:705.350 
+  ***** 
+T66C4 016:705.359 API Error: API JLINK_GetFeatureString function called before JLINKARM_Open()
+T66C4 016:706.086   
+  ***** Error: 
+T66C4 016:706.101   Cannot connect to J-Link.
+T66C4 016:710.282 
+  ***** 
+T66C4 016:710.292 API Error: API JLINK_GetEmuCaps function called before JLINKARM_Open()
+T66C4 016:710.300 JLINK_GetEmuCaps()
+T66C4 016:710.830   
+  ***** Error: 
+T66C4 016:710.840   Cannot connect to J-Link.
+T66C4 016:715.051 - 4.757ms
+T66C4 016:715.061 
+  ***** 
+T66C4 016:715.068 API Error: API JLINK_TIF_GetAvailable function called before JLINKARM_Open()
+T66C4 016:715.076 JLINK_TIF_GetAvailable(...)
+T66C4 016:715.721   
+  ***** Error: 
+T66C4 016:715.741   Cannot connect to J-Link.
+T66C4 016:720.288 - 5.222ms
+T66C4 027:420.027 JLINK_IsOpen()
+T66C4 027:420.052 - 0.028ms returns 0x00
+T66C4 027:420.060 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000010) 
+T66C4 027:422.064 - 2.011ms returns 0
+T66C4 031:608.736 JLINK_Close()
+T66C4 031:608.852 - 0.119ms
+T66C4 031:608.862   
+T66C4 031:608.867   Closed
