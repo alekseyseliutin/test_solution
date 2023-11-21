@@ -207,6 +207,7 @@ void DMA2_Stream0_IRQHandler(void)
   if(LL_DMA_IsActiveFlag_TC0(DMA2))
   {
     LL_DMA_ClearFlag_TC0(DMA2);
+    // Здесь можно отключить прерывания от DMA, но в нашем случае нет многозадачности и функция обработки выполняется быстрее чем одно преобразование.
     ADC_DMA_TransferComplete_Callback();
   }
   /* USER CODE END DMA2_Stream0_IRQn 0 */
