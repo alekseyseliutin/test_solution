@@ -23,7 +23,7 @@
   <td id="projectalign">
    <div id="projectname">TEST_SOLUTION
    </div>
-   <div id="projectbrief">Запуск ADC от таймера частотой 5кГц, запуск DMA, 1 раз в секунду усреднение и результатов в терминал</div>
+   <div id="projectbrief">Запуск ADC от таймера частотой 5кГц, запуск DMA на 125 преобразований (5мс), усреднение и вывод в DAC, 1 раз в секунду усреднение и вывод результатов в терминал</div>
   </td>
  </tr>
  </tbody>
@@ -75,13 +75,12 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Функции</a> &#124;
-<a href="#var-members">Переменные</a>  </div>
+<a href="#func-members">Функции</a>  </div>
   <div class="headertitle"><div class="title">Файл stm32f4xx_it.c</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Interrupt Service Routines.  
+<p>Функции обработки прерываний  
 <a href="#details">Подробнее...</a></p>
 <div class="textblock"><code>#include &quot;main.h&quot;</code><br />
 <code>#include &quot;stm32f4xx_it.h&quot;</code><br />
@@ -130,15 +129,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SysTick_Handler</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><b>DMA2_Stream0_IRQHandler</b> (void)</td></tr>
 <tr class="memdesc:aaf6ce196dde98712e1223b99766e06c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function handles DMA2 stream0 global interrupt. <br /></td></tr>
 <tr class="separator:aaf6ce196dde98712e1223b99766e06c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Переменные</h2></td></tr>
-<tr class="memitem:a5ac00e93c5b39f099a88f61ba9869104" id="r_a5ac00e93c5b39f099a88f61ba9869104"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__it_8c.html#a5ac00e93c5b39f099a88f61ba9869104">ADC_data</a> []</td></tr>
-<tr class="separator:a5ac00e93c5b39f099a88f61ba9869104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Interrupt Service Routines. </p>
-<dl class="section attention"><dt>Внимание</dt><dd></dd></dl>
+<div class="textblock"><p>Функции обработки прерываний </p>
+<dl class="section attention"><dt>Внимание</dt><dd>Функция DMA2_Stream0_IRQHandler обрабатывает прерывание от DMA</dd></dl>
 <h2><center>&copy; Copyright (c) 2023 STMicroelectronics. All rights reserved.</center></h2>
 <p>This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </p>
 </div><h2 class="groupheader">Функции</h2>
@@ -158,30 +152,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DMA2_Stream0_IRQHandl
       </table>
 </div><div class="memdoc">
 <p>Обработка буфера данных от ADC. Вызывается из прерывания DMA раз 25мс. Усредняет 125 значений из ADC и выставляет в DAC </p>
-
-</div>
-</div>
-<h2 class="groupheader">Переменные</h2>
-<a id="a5ac00e93c5b39f099a88f61ba9869104" name="a5ac00e93c5b39f099a88f61ba9869104"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ac00e93c5b39f099a88f61ba9869104">&#9670;&#160;</a></span>ADC_data</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t ADC_data[]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Буфер для данных из ADC </p>
 
 </div>
 </div>

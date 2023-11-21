@@ -23,7 +23,7 @@
   <td id="projectalign">
    <div id="projectname">TEST_SOLUTION
    </div>
-   <div id="projectbrief">Запуск ADC от таймера частотой 5кГц, запуск DMA, 1 раз в секунду усреднение и результатов в терминал</div>
+   <div id="projectbrief">Запуск ADC от таймера частотой 5кГц, запуск DMA на 125 преобразований (5мс), усреднение и вывод в DAC, 1 раз в секунду усреднение и вывод результатов в терминал</div>
   </td>
  </tr>
  </tbody>
@@ -119,11 +119,9 @@ TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><b>htim2</b
 <tr class="separator:a2c80fd5510e2990a59a5c90d745c716c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9fcb26f5b920b08b357e00e1ba3e6a4" id="r_ac9fcb26f5b920b08b357e00e1ba3e6a4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac9fcb26f5b920b08b357e00e1ba3e6a4">ADC_data</a> [<a class="el" href="main_8c.html#a84ad8abb26bff116df93ff56794334b9">ADC_BUF_SIZE</a>]</td></tr>
 <tr class="separator:ac9fcb26f5b920b08b357e00e1ba3e6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36692bbc61358ebc0e37a6fc6a395d28" id="r_a36692bbc61358ebc0e37a6fc6a395d28"><td class="memItemLeft" align="right" valign="top"><a id="a36692bbc61358ebc0e37a6fc6a395d28" name="a36692bbc61358ebc0e37a6fc6a395d28"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>result</b> = 0</td></tr>
+<tr class="memitem:a36692bbc61358ebc0e37a6fc6a395d28" id="r_a36692bbc61358ebc0e37a6fc6a395d28"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a36692bbc61358ebc0e37a6fc6a395d28">result</a> = 0</td></tr>
 <tr class="separator:a36692bbc61358ebc0e37a6fc6a395d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3bc5b9cab8f5380bcd1f15ff5145d49" id="r_ad3bc5b9cab8f5380bcd1f15ff5145d49"><td class="memItemLeft" align="right" valign="top"><a id="ad3bc5b9cab8f5380bcd1f15ff5145d49" name="ad3bc5b9cab8f5380bcd1f15ff5145d49"></a>
-volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>f_ready</b> = 0</td></tr>
+<tr class="memitem:ad3bc5b9cab8f5380bcd1f15ff5145d49" id="r_ad3bc5b9cab8f5380bcd1f15ff5145d49"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad3bc5b9cab8f5380bcd1f15ff5145d49">f_ready</a> = 0</td></tr>
 <tr class="separator:ad3bc5b9cab8f5380bcd1f15ff5145d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
@@ -131,7 +129,8 @@ volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>f_ready</
 <dl class="section author"><dt>Авторы</dt><dd>: Селютин Алексей </dd></dl>
 <dl class="section date"><dt>Дата</dt><dd>: 19.11.2023 </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Необходимо сделать:</a></b></dt><dd>Что можно добавить: - калибровку ADC и измерение Vref. Это может повысить точность измерений. <br  />
- По причине отсутствия выхода SWO ST-LINK2 - вывод отладочной информации в терминал не тестировался. <br  />
+ Можно ввести два буфера для DMA и включить мультибуфер (актуально для высокой частоты дискредитации ADC) </dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>По причине отсутствия выхода SWO ST-LINK2 - вывод отладочной информации в терминал не тестировался. <br  />
  Для включения вывода в терминал должно быть достаточно включить #define PRINTF_ENABLE</dd></dl>
 <h2><center>&copy; Copyright (c) 2023 STMicroelectronics. All rights reserved.</center></h2>
 <p>This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </p>
@@ -264,7 +263,37 @@ volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>f_ready</
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Буфер для данных из ADC </p>
+<p>Буфер для данных из ADC. При частоте дискретизации 5кГц заполняется за 25 мс </p>
+
+</div>
+</div>
+<a id="ad3bc5b9cab8f5380bcd1f15ff5145d49" name="ad3bc5b9cab8f5380bcd1f15ff5145d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3bc5b9cab8f5380bcd1f15ff5145d49">&#9670;&#160;</a></span>f_ready</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t f_ready = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Флаг готовности данных для вывода в отладочный терминал (раз в секунду) </p>
+
+</div>
+</div>
+<a id="a36692bbc61358ebc0e37a6fc6a395d28" name="a36692bbc61358ebc0e37a6fc6a395d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36692bbc61358ebc0e37a6fc6a395d28">&#9670;&#160;</a></span>result</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t result = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Сумма значний всех преобразований за 1 секунду </p>
 
 </div>
 </div>

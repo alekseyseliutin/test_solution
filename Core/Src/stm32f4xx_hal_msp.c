@@ -2,10 +2,8 @@
 /**
   ******************************************************************************
   * @file         stm32f4xx_hal_msp.c
-  * @brief        This file provides code for the MSP Initialization
-  *               and de-Initialization codes.
+  * @brief        Инициализация и деинициализация
   ******************************************************************************
-  * @attention
   *
   * <h2><center>&copy; Copyright (c) 2023 STMicroelectronics.
   * All rights reserved.</center></h2>

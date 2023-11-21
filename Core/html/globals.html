@@ -23,7 +23,7 @@
   <td id="projectalign">
    <div id="projectname">TEST_SOLUTION
    </div>
-   <div id="projectbrief">Запуск ADC от таймера частотой 5кГц, запуск DMA, 1 раз в секунду усреднение и результатов в терминал</div>
+   <div id="projectbrief">Запуск ADC от таймера частотой 5кГц, запуск DMA на 125 преобразований (5мс), усреднение и вывод в DAC, 1 раз в секунду усреднение и вывод результатов в терминал</div>
   </td>
  </tr>
  </tbody>
@@ -72,12 +72,13 @@ $(function() {
 <div class="contents">
 <div class="textblock">Список всех документированных членов файлов со ссылками на документацию.</div><ul>
 <li>ADC_BUF_SIZE&#160;:&#160;<a class="el" href="main_8c.html#a84ad8abb26bff116df93ff56794334b9">main.c</a></li>
-<li>ADC_data&#160;:&#160;<a class="el" href="main_8c.html#ac9fcb26f5b920b08b357e00e1ba3e6a4">main.c</a>, <a class="el" href="stm32f4xx__it_8c.html#a5ac00e93c5b39f099a88f61ba9869104">stm32f4xx_it.c</a></li>
+<li>ADC_data&#160;:&#160;<a class="el" href="main_8c.html#ac9fcb26f5b920b08b357e00e1ba3e6a4">main.c</a></li>
 <li>ADC_DMA_TransferComplete_Callback()&#160;:&#160;<a class="el" href="main_8c.html#a7b617ba272dd37827ba86861517127ec">main.c</a>, <a class="el" href="stm32f4xx__it_8c.html#a6a2727ff73e5d6855b57cbb008190e29">stm32f4xx_it.c</a></li>
 <li>BusFault_Handler()&#160;:&#160;<a class="el" href="stm32f4xx__it_8c.html#a850cefb17a977292ae5eb4cafa9976c3">stm32f4xx_it.c</a></li>
 <li>DebugMon_Handler()&#160;:&#160;<a class="el" href="stm32f4xx__it_8c.html#adbdfb05858cc36fc520974df37ec3cb0">stm32f4xx_it.c</a></li>
 <li>DMA2_Stream0_IRQHandler()&#160;:&#160;<a class="el" href="stm32f4xx__it_8c.html#aaf6ce196dde98712e1223b99766e06c0">stm32f4xx_it.c</a></li>
 <li>Error_Handler()&#160;:&#160;<a class="el" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9">main.c</a></li>
+<li>f_ready&#160;:&#160;<a class="el" href="main_8c.html#ad3bc5b9cab8f5380bcd1f15ff5145d49">main.c</a></li>
 <li>HAL_DAC_MspDeInit()&#160;:&#160;<a class="el" href="stm32f4xx__hal__msp_8c.html#a4caf761f179e82f99674ef63643340f3">stm32f4xx_hal_msp.c</a></li>
 <li>HAL_DAC_MspInit()&#160;:&#160;<a class="el" href="stm32f4xx__hal__msp_8c.html#acd409f887681168e93817e8a5485d74b">stm32f4xx_hal_msp.c</a></li>
 <li>HAL_MspInit()&#160;:&#160;<a class="el" href="stm32f4xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f">stm32f4xx_hal_msp.c</a></li>
@@ -92,6 +93,7 @@ $(function() {
 <li>MemManage_Handler()&#160;:&#160;<a class="el" href="stm32f4xx__it_8c.html#a3150f74512510287a942624aa9b44cc5">stm32f4xx_it.c</a></li>
 <li>NMI_Handler()&#160;:&#160;<a class="el" href="stm32f4xx__it_8c.html#a6ad7a5e3ee69cb6db6a6b9111ba898bc">stm32f4xx_it.c</a></li>
 <li>PendSV_Handler()&#160;:&#160;<a class="el" href="stm32f4xx__it_8c.html#a6303e1f258cbdc1f970ce579cc015623">stm32f4xx_it.c</a></li>
+<li>result&#160;:&#160;<a class="el" href="main_8c.html#a36692bbc61358ebc0e37a6fc6a395d28">main.c</a></li>
 <li>SVC_Handler()&#160;:&#160;<a class="el" href="stm32f4xx__it_8c.html#a3e5ddb3df0d62f2dc357e64a3f04a6ce">stm32f4xx_it.c</a></li>
 <li>SystemClock_Config()&#160;:&#160;<a class="el" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920">main.c</a></li>
 <li>SystemCoreClockUpdate()&#160;:&#160;<a class="el" href="group___s_t_m32_f4xx___system___private___functions.html#gae0c36a9591fe6e9c45ecb21a794f0f0f">system_stm32f4xx.c</a></li>

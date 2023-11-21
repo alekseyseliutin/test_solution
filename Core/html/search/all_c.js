@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['список_20задач_0',['Список задач',['../todo.html',1,'']]]
+  ['usagefault_5fhandler_0',['UsageFault_Handler',['../stm32f4xx__it_8c.html#a1d98923de2ed6b7309b66f9ba2971647',1,'stm32f4xx_it.c']]]
 ];

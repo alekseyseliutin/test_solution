@@ -2,9 +2,9 @@
 /**
   ******************************************************************************
   * @file    stm32f4xx_it.c
-  * @brief   Interrupt Service Routines.
+  * @brief   Функции обработки прерываний
   ******************************************************************************
-  * @attention
+  * @attention Функция DMA2_Stream0_IRQHandler обрабатывает прерывание от DMA
   *
   * <h2><center>&copy; Copyright (c) 2023 STMicroelectronics.
   * All rights reserved.</center></h2>
@@ -42,7 +42,6 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-extern uint16_t ADC_data[];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -208,7 +207,7 @@ void DMA2_Stream0_IRQHandler(void)
   if(LL_DMA_IsActiveFlag_TC0(DMA2))
   {
     LL_DMA_ClearFlag_TC0(DMA2);
-		ADC_DMA_TransferComplete_Callback();
+    ADC_DMA_TransferComplete_Callback();
   }
   /* USER CODE END DMA2_Stream0_IRQn 0 */
 
