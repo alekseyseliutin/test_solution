@@ -28,6 +28,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -67,6 +68,27 @@ static void MX_RTC_Init(void);
 static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
 
+#ifdef PRINTF_ENABLE
+#define ITM_Port8(n)    (*((volatile unsigned char *)(0xE0000000+4*n)))
+#define ITM_Port16(n)   (*((volatile unsigned short*)(0xE0000000+4*n)))
+#define ITM_Port32(n)   (*((volatile unsigned long *)(0xE0000000+4*n)))
+#define DEMCR           (*((volatile unsigned long *)(0xE000EDFC)))
+#define TRCENA          0x01000000
+
+FILE __stdout;
+FILE __stdin;
+
+int fputc(int ch, FILE *f) 
+{
+  if (DEMCR & TRCENA) 
+	{
+
+		while (ITM_Port32(0) == 0);
+    ITM_Port8(0) = ch;
+	}
+  return(ch);
+}
+#endif
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -424,7 +446,7 @@ static void MX_DMA_Init(void)
 }
 
 /**
-  * @brief задействуем pin A1 для отладки проверки частоты дискретизации ADC
+  * @brief GPIO Initialization Function
   * @param None
   * @retval None
   */
@@ -473,10 +495,6 @@ void ADC_DMA_TransferComplete_Callback()
 		big_summ = 0;
 		count = 0;
 	}
-
-  LL_DMA_SetDataLength(DMA2, LL_DMA_STREAM_0, sizeof(ADC_data)/sizeof(ADC_data[0]));
-  LL_DMA_EnableIT_TC(DMA2, LL_DMA_STREAM_0);
-  LL_DMA_EnableStream(DMA2, LL_DMA_STREAM_0);
 }
 /* USER CODE END 4 */
 
